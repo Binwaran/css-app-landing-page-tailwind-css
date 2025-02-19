@@ -17,26 +17,86 @@
   </style>
 
   <body class="bg-[#F6F6FB]">
-    <header class="bg-[#F6F6FB] flex flex-col items-center">
-        <!-- Navbar -->
-        <nav class="w-full max-w-6xl bg-[#FFFFFF] rounded-full shadow-md mt-5 p-4 flex justify-between items-center px-8">
-            <div class="text-2xl font-bold text-gray-900 relative">Acme<span class="text-[#5E44FF] absolute -top-5 text-4xl">.</span></div>
-            <div class="hidden md:flex space-x-6 gap-[10px]">
-                <a href="#" class="text-[#5E44FF] taxt-base font-medium underline font-[inter] leading-6 ">Home</a>
-                <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Features</a>
-                <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Pricing</a>
-                <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Contact</a>
-            </div>
-        </nav>
-        
-        <!-- Hero Section -->
-        <div class="text-center mt-16">
-            <span class="bg-[#563AFF] bg-opacity-10 text-[#5E44FF] taxt-base font-medium px-4 py-1 rounded-full text-sm font-semibold font-[inter] px-[20px] py-[8px]">🌈 Acme Productivity App</span>
-            <h1 class="mt-10 mb-5 text-[80px] font-extrabold leading-[84px] text-[#1A1A2C] font-[inter]">Boost Your <span class="text-[#5E44FF]">Product</span>ivity</h1>
-            <p class="mt-4 text-[24px] font-semibold leading-[32px] text-[#1A1A2C] font-[inter]">Streamline your workflow with our all-in-one productivity app.</p>
-            <button class="mt-10 w-[187px] h-[56px] bg-[#1A1A2C] text-white rounded-xl font-semibold hover:bg-gray-800 font-[inter] px-[36px] py-[16px]">Start Free Trial</button>
-        </div>
-    </header>
+
+    <header class="bg-[#F6F6FB] flex flex-col items-center px-4">
+      <!-- Navbar -->
+      <nav class="w-full max-w-6xl bg-white rounded-full shadow-md mt-5 p-4 flex justify-between items-center">
+          <div class="text-2xl font-bold text-gray-900 relative">
+              Acme<span class="text-[#5E44FF] absolute -top-5 text-4xl">.</span>
+          </div>
+          
+          <!-- Hamburger Button -->
+          <button class="md:hidden text-[#1A1A2C]" id="menu-btn">
+              <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+  
+          <!-- Navigation Links -->
+          <div class="hidden md:flex space-x-6">
+              <a href="#" class="text-[#5E44FF] text-base font-medium underline">Home</a>
+              <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900">Features</a>
+              <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900">Pricing</a>
+              <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900">Contact</a>
+          </div>
+      </nav>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden flex flex-col items-center w-full bg-white rounded-md shadow-md mt-4 md:hidden">
+          <a href="#" class="py-2 text-[#5E44FF] font-medium underline">Home</a>
+          <a href="#" class="py-2 text-[#1A1A2C] font-medium hover:text-gray-900">Features</a>
+          <a href="#" class="py-2 text-[#1A1A2C] font-medium hover:text-gray-900">Pricing</a>
+          <a href="#" class="py-2 text-[#1A1A2C] font-medium hover:text-gray-900">Contact</a>
+      </div>
+  
+      <!-- Hero Section -->
+      <div class="text-center mt-12 px-4">
+          <span class="bg-[#563AFF] bg-opacity-10 text-[#5E44FF] text-sm font-semibold px-4 py-1 rounded-full">
+              🌈 Acme Productivity App
+          </span>
+          <h1 class="mt-6 mb-4 text-[40px] md:text-[80px] font-extrabold leading-tight text-[#1A1A2C]">
+              Boost Your <span class="text-[#5E44FF]">Product</span>ivity
+          </h1>
+          <p class="text-lg md:text-2xl text-[#1A1A2C] font-medium">
+              Streamline your workflow with our all-in-one productivity app.
+          </p>
+          <button class="mt-8 w-[160px] md:w-[187px] h-[50px] md:h-[56px] bg-[#1A1A2C] text-white rounded-xl font-semibold hover:bg-gray-800">
+              Start Free Trial
+          </button>
+      </div>
+  </header>
+  
+  <style>
+  /* ใช้ Media Query ปรับแต่งเพิ่มเติม */
+  @media (max-width: 640px) {
+      h1 {
+          font-size: 32px;
+          line-height: 40px;
+      }
+  
+      p {
+          font-size: 18px;
+      }
+  
+      button {
+          width: 140px;
+          height: 45px;
+          font-size: 14px;
+      }
+  }
+  </style>
+  
+  <script>
+      // Toggle mobile menu
+      document.getElementById('menu-btn').addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+  </script>
+  
+    
+    
+
+
       <!-- Start Coding Here -->
   <!---- Features section start here---->
   
@@ -76,55 +136,52 @@
 </div>
 <!---- Features section ended here---->
 
-<last class="bg-[#F6F6FB] h-screen flex flex-col ">
-  <div
-    class=" w-[100vw] mx-auto px-4 py-2 flex-1 flex items-center justify-center"
-  >
-    <!-- ปรับขนาดกล่องฟอร์มให้กว้างขึ้น -->
-    <div
-      class="w-[50vw] bg-white rounded-lg shadow-sm p-12 md:p-20"
-    >
-      <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">
+<section class="bg-[#F6F6FB] min-h-screen flex flex-col px-4">
+  <div class="w-full flex-1 flex items-center justify-center py-8">
+    <!-- ฟอร์มที่ responsive -->
+    <div class="w-full max-w-2xl bg-white rounded-lg shadow-sm p-6 sm:p-12 md:p-16">
+      <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6 sm:mb-10">
         Get in Touch
       </h1>
 
-      <!-- ปรับให้ฟอร์มมีการขยายด้านข้างมากขึ้น -->
-      <form class="p-20 ">
-        <div class="mb-6 p-0-20">
+      <form class="space-y-6">
+        <!-- Name Input -->
+        <div>
           <label for="name" class="block text-gray-600 mb-2">Name</label>
           <input
             type="text"
             id="name"
             placeholder="John Doe"
-            class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
+            class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
           />
         </div>
 
-        <div class="mb-6 p-0-20">
+        <!-- Email Input -->
+        <div>
           <label for="email" class="block text-gray-600 mb-2">Email</label>
           <input
             type="email"
             id="email"
             placeholder="john@example.com"
-            class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
+            class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
           />
         </div>
 
-        <div class="mb-8 p-0-20">
-          <label for="message" class="block text-gray-600 mb-2"
-            >Message</label
-          >
+        <!-- Message Input -->
+        <div>
+          <label for="message" class="block text-gray-600 mb-2">Message</label>
           <textarea
             id="message"
             rows="5"
             placeholder="Your message..."
-            class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
+            class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"
           ></textarea>
         </div>
 
+        <!-- Submit Button -->
         <button
           type="submit"
-          class="w-full py-3 px-6 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 transition duration-200"
+          class="w-full py-3 px-6 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 transition duration-200"
         >
           Submit
         </button>
@@ -132,38 +189,21 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="py-6 bg-white border-t border-gray-100">
-    <div
-      class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
-    >
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
       <div class="text-gray-500 mb-4 md:mb-0">
         Acme productivity app ©2024
       </div>
-      <div class="flex space-x-6">
-        <a
-          href="#"
-          class="text-gray-600 hover:text-gray-900 transition duration-200"
-          >FAQ</a
-        >
-        <a
-          href="#"
-          class="text-gray-600 hover:text-gray-900 transition duration-200"
-          >Terms</a
-        >
-        <a
-          href="#"
-          class="text-gray-600 hover:text-gray-900 transition duration-200"
-          >AI Policy</a
-        >
-        <a
-          href="#"
-          class="text-gray-600 hover:text-gray-900 transition duration-200"
-          >Pricing</a
-        >
+      <div class="flex space-x-4 sm:space-x-6">
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">FAQ</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">Terms</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">AI Policy</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">Pricing</a>
       </div>
     </div>
   </footer>
-</last>
+</section>
   </body>
 </html>
 
