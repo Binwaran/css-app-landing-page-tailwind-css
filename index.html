@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Responsive viewport meta tag - essential for mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,107 +13,128 @@
   <title>Acme App</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<style>
-  /* {
-      background-color: #F6F6FB !important;
-    }*/
-</style>
 
 <body class="bg-[#F6F6FB]">
-  <header class="bg-[#F6F6FB] flex flex-col items-center">
-    <!-- Navbar -->
-    <nav class="w-full max-w-6xl bg-[#FFFFFF] rounded-full shadow-md mt-5 p-4 flex justify-between items-center px-8">
-      <div class="text-2xl font-bold text-gray-900 relative">Acme<span
-          class="text-[#5E44FF] absolute -top-5 text-4xl">.</span></div>
+  <!-- Header Section with responsive padding -->
+  <header class="bg-[#F6F6FB] flex flex-col items-center px-4">
+    <!-- Navbar with responsive width and padding -->
+    <nav class="w-full max-w-6xl bg-white rounded-full shadow-md mt-5 p-4 flex justify-between items-center px-4 md:px-8">
+      <!-- Logo with responsive text size -->
+      <div class="text-xl md:text-2xl font-bold text-gray-900 relative">Acme<span
+          class="text-[#5E44FF] absolute -top-5 text-3xl md:text-4xl">.</span></div>
+      
+      <!-- Mobile Menu Button - visible only on mobile (< 768px) -->
+      <button class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      
+      <!-- Desktop Menu - hidden on mobile, flex on medium and larger screens -->
       <div class="hidden md:flex space-x-6 gap-[10px]">
-        <a href="#" class="text-[#5E44FF] taxt-base font-medium underline font-[inter] leading-6 ">Home</a>
-        <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Features</a>
-        <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Pricing</a>
-        <a href="#" class="text-[#1A1A2C] taxt-base font-medium hover:text-gray-900 font-[inter] leading-6">Contact</a>
+        <a href="#" class="text-[#5E44FF] text-base font-medium underline font-[inter] leading-6">Home</a>
+        <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900 font-[inter] leading-6">Features</a>
+        <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900 font-[inter] leading-6">Pricing</a>
+        <a href="#" class="text-[#1A1A2C] text-base font-medium hover:text-gray-900 font-[inter] leading-6">Contact</a>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="text-center mt-16">
-      <span
-        class="bg-[#563AFF] bg-opacity-10 text-[#5E44FF] taxt-base rounded-full text-sm font-semibold font-[inter] px-[20px] py-[8px]">🌈
-        Acme Productivity App</span>
-      <h1 class="mt-10 mb-5 text-[80px] font-extrabold leading-[84px] text-[#1A1A2C] font-[inter]">Boost Your <span
-          class="text-[#5E44FF]">Product</span>ivity</h1>
-      <p class="mt-4 text-[24px] font-semibold leading-[32px] text-[#1A1A2C] font-[inter]">Streamline your workflow with
-        our all-in-one productivity app.</p>
-      <button
-        class="mt-10 w-[187px] h-[56px] bg-[#1A1A2C] text-white rounded-xl font-semibold hover:bg-gray-800 font-[inter] px-[36px] py-[16px]">Start
-        Free Trial</button>
+    <!-- Hero Section with responsive spacing and text sizes -->
+    <div class="text-center mt-8 md:mt-16 px-4">
+      <!-- Badge with responsive padding and text size -->
+      <span class="bg-[#563AFF] bg-opacity-10 text-[#5E44FF] text-xs md:text-sm rounded-full font-semibold font-[inter] px-4 md:px-[20px] py-2 md:py-[8px]">
+        🌈 Acme Productivity App
+      </span>
+      <!-- Heading with responsive font sizes and line height -->
+      <h1 class="mt-6 md:mt-10 mb-3 md:mb-5 text-4xl md:text-6xl lg:text-[80px] font-extrabold leading-tight md:leading-[84px] text-[#1A1A2C] font-[inter]">
+        Boost Your <span class="text-[#5E44FF]">Product</span>ivity
+      </h1>
+      <!-- Subheading with responsive text size -->
+      <p class="mt-2 md:mt-4 text-lg md:text-2xl font-semibold leading-relaxed md:leading-[32px] text-[#1A1A2C] font-[inter]">
+        Streamline your workflow with our all-in-one productivity app.
+      </p>
+      <!-- Button with responsive width and padding -->
+      <button class="mt-6 md:mt-10 w-full md:w-[187px] h-[56px] bg-[#1A1A2C] text-white rounded-xl font-semibold hover:bg-gray-800 font-[inter] px-6 md:px-[36px] py-4 md:py-[16px]">
+        Start Free Trial
+      </button>
     </div>
   </header>
-  <!-- Start Coding Here -->
-  <!---- Features section start here---->
 
-  <section class="flex flex-col items-center mb-0 bg-[#F6F6FB] mt-20">
-    <div class="w-full flex justify-center items-center flex-wrap">
-      <div class="w-96 h-72 flex flex-col items-start bg-[#D7E5F6] m-4 p-7 rounded-3xl gap-5 shadow-lg">
-        <div class="bg-white w-14 h-14 rounded-xl flex justify-center items-center mb-5">
-          <img class="w-8 h-8" src="./images/Frame.png" alt="Icon Rocket" />
+  <!-- Features section with responsive grid layout -->
+  <section class="flex flex-col items-center mb-0 bg-[#F6F6FB] mt-12 md:mt-20 px-4">
+    <!-- Feature cards container with responsive gap -->
+    <div class="w-full flex justify-center items-center flex-wrap gap-4">
+      <!-- Feature Card 1 - Full width on mobile, responsive width on larger screens -->
+      <div class="w-full md:w-[45%] lg:w-96 h-auto md:h-72 flex flex-col items-start bg-[#D7E5F6] p-6 md:p-7 rounded-3xl gap-4 md:gap-5">
+        <!-- Icon container with responsive dimensions -->
+        <div class="bg-white w-12 md:w-14 h-12 md:h-14 rounded-xl flex justify-center items-center mb-3 md:mb-5">
+          <img class="w-6 md:w-8 h-6 md:h-8" src="/images/Frame.png" alt="Icon Rocket" />
         </div>
-        <h2 class="font-inter text-2xl font-semibold leading-8 text-[#1A1A2C] m-0">Streamlined Workflows</h2>
-        <p class="font-inter text-base font-medium leading-6 text-[#5F5F76] m-0">
+        <!-- Feature title with responsive text size -->
+        <h2 class="font-inter text-xl md:text-2xl font-semibold leading-7 md:leading-8 text-[#1A1A2C]">Streamlined Workflows</h2>
+        <!-- Feature description with responsive text size -->
+        <p class="font-inter text-sm md:text-base font-medium leading-5 md:leading-6 text-[#5F5F76]">
           Navigate through our app with ease using our user-friendly and intuitive interface.
         </p>
       </div>
 
-      <div class="w-96 h-72 flex flex-col items-start bg-[#D8E0FC] m-4 p-7 rounded-3xl gap-5">
-        <div class="bg-white w-14 h-14 rounded-xl flex justify-center items-center mb-5">
-          <img class="w-8 h-8" src="./images/Frame-2.png" alt="Icon Work Flow" />
+      <!-- Feature Card 2 - Similar responsive structure -->
+      <div class="w-full md:w-[45%] lg:w-96 h-auto md:h-72 flex flex-col items-start bg-[#D8E0FC] p-6 md:p-7 rounded-3xl gap-4 md:gap-5">
+        <div class="bg-white w-12 md:w-14 h-12 md:h-14 rounded-xl flex justify-center items-center mb-3 md:mb-5">
+          <img class="w-6 md:w-8 h-6 md:h-8" src="/images/Frame-2.png" alt="Icon Work Flow" />
         </div>
-        <h2 class="font-inter text-2xl font-semibold leading-8 text-[#1A1A2C] m-0">Blazing Fast Performance</h2>
-        <p class="font-inter text-base font-medium leading-6 text-[#5F5F76] m-0">
+        <h2 class="font-inter text-xl md:text-2xl font-semibold leading-7 md:leading-8 text-[#1A1A2C]">Blazing Fast Performance</h2>
+        <p class="font-inter text-sm md:text-base font-medium leading-5 md:leading-6 text-[#5F5F76]">
           Experience lightning-fast performance and instant responsiveness with our cutting-edge technology.
         </p>
       </div>
 
-      <div class="w-96 h-72 flex flex-col items-start bg-[#E8DCF6] m-4 p-7 rounded-3xl gap-5">
-        <div class="bg-white w-14 h-14 rounded-xl flex justify-center items-center mb-5">
-          <img class="w-8 h-8" src="./images/Frame-3.png" alt="Icon Smile Moji" />
+      <!-- Feature Card 3 - Similar responsive structure -->
+      <div class="w-full md:w-[45%] lg:w-96 h-auto md:h-72 flex flex-col items-start bg-[#E8DCF6] p-6 md:p-7 rounded-3xl gap-4 md:gap-5">
+        <div class="bg-white w-12 md:w-14 h-12 md:h-14 rounded-xl flex justify-center items-center mb-3 md:mb-5">
+          <img class="w-6 md:w-8 h-6 md:h-8" src="/images/Frame-3.png" alt="Icon Smile Moji" />
         </div>
-        <h2 class="font-inter text-2xl font-semibold leading-8 text-[#1A1A2C] m-0">Intuitive Interface</h2>
-        <p class="font-inter text-base font-medium leading-6 text-[#5F5F76] m-0">
+        <h2 class="font-inter text-xl md:text-2xl font-semibold leading-7 md:leading-8 text-[#1A1A2C]">Intuitive Interface</h2>
+        <p class="font-inter text-sm md:text-base font-medium leading-5 md:leading-6 text-[#5F5F76]">
           Automate repetitive tasks and focus on high-impact work with our powerful productivity features.
         </p>
       </div>
     </div>
   </section>
-  </div>
-  <!---- Features section ended here---->
 
-  <last class="bg-[#F6F6FB] h-screen flex flex-col mt-20">
-    <div class=" w-[100vw] mx-auto px-4 py-2 flex-1 flex items-center justify-center">
-      <!-- ปรับขนาดกล่องฟอร์มให้กว้างขึ้น -->
-      <div class="w-[50vw] bg-white rounded-lg shadow-sm p-12 md:p-20">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">
+  <!-- Contact Section with responsive layout -->
+  <section class="bg-[#F6F6FB] min-h-screen flex flex-col mt-12 md:mt-20">
+    <!-- Form container with responsive width and padding -->
+    <div class="w-full px-4 py-2 flex-1 flex items-center justify-center">
+      <!-- Form card with responsive width and padding -->
+      <div class="w-full md:w-[80%] lg:w-[50vw] bg-white rounded-lg shadow-sm p-6 md:p-12 lg:p-20">
+        <!-- Form heading with responsive text size -->
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 md:mb-10">
           Get in Touch
         </h1>
 
-        <!-- ปรับให้ฟอร์มมีการขยายด้านข้างมากขึ้น -->
-        <form class="p-20 ">
-          <div class="mb-6 p-0-20">
+        <!-- Form with responsive spacing -->
+        <form class="space-y-6 md:p-8 lg:p-20">
+          <!-- Form fields with responsive spacing -->
+          <div class="mb-6">
             <label for="name" class="block text-gray-600 mb-2">Name</label>
             <input type="text" id="name" placeholder="John Doe"
-              class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200" />
+              class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200" />
           </div>
 
-          <div class="mb-6 p-0-20">
+          <div class="mb-6">
             <label for="email" class="block text-gray-600 mb-2">Email</label>
             <input type="email" id="email" placeholder="john@example.com"
-              class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200" />
+              class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200" />
           </div>
 
-          <div class="mb-8 p-0-20">
+          <div class="mb-8">
             <label for="message" class="block text-gray-600 mb-2">Message</label>
             <textarea id="message" rows="5" placeholder="Your message..."
-              class="w-full px-5 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"></textarea>
+              class="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-200"></textarea>
           </div>
 
+          <!-- Submit button with responsive width -->
           <button type="submit"
             class="w-full py-3 px-6 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 transition duration-200">
             Submit
@@ -122,19 +143,23 @@
       </div>
     </div>
 
+    <!-- Footer with responsive layout -->
     <footer class="py-6 bg-white border-t border-gray-100">
+      <!-- Footer container with responsive flex direction -->
       <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <div class="text-gray-500 mb-4 md:mb-0">
+        <!-- Copyright text with responsive margin and text size -->
+        <div class="text-gray-500 mb-4 md:mb-0 text-sm md:text-base">
           Acme productivity app ©2024
         </div>
-        <div class="flex space-x-6">
-          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">FAQ</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">Terms</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">AI Policy</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200">Pricing</a>
+        <!-- Footer links with responsive spacing and text size -->
+        <div class="flex flex-wrap justify-center md:space-x-6 gap-4 md:gap-0">
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200 text-sm md:text-base">FAQ</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200 text-sm md:text-base">Terms</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200 text-sm md:text-base">AI Policy</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-200 text-sm md:text-base">Pricing</a>
         </div>
       </div>
     </footer>
-  </last>
+  </section>
 </body>
 </html>
